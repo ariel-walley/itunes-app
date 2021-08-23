@@ -5,7 +5,7 @@ const StyledHeader = styled.div`
 `;
 
 export default function Header(props) {
-  return(
-    <StyledHeader>{props.artistName}</StyledHeader>
+  return (
+    <StyledHeader>{props.mainArtistName}</StyledHeader>
   );
 }
