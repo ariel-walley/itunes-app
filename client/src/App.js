@@ -12,6 +12,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
+  background-color: #728f8a;
 `;
 
 function App() { 

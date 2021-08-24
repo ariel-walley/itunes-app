@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 const CardContainer = styled.div`
-  width: 25%;
+  width: 15%;
   margin: 15px;
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #c7d2d0;
   border-radius: 10px;
   text-align: center;
   display: flex;
