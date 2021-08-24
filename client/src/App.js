@@ -12,7 +12,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: #728f8a;
 `;
 
 function App() { 
@@ -38,10 +37,11 @@ function App() {
 
     albums.forEach((album) => {
       display.push(<AlbumCard key={album.collectionId}
+        link={album.collectionViewUrl}
         artistName={album.artistName}
         albumName={album.collectionName}
         year={album.releaseDate.slice(0, 4)}
-        art={album.artworkUrl100}
+        art={album.artworkUrl100.replace("100x100bb", "300x300bb")}
       />) 
     })
 
