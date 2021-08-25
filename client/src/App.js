@@ -21,7 +21,7 @@ const Container = styled.div`
   align-content: center;
 `;
 
-function App() { 
+function App() {
   const [loading, setStatus] = useState(true);
   const [artist, setArtist] = useState('');
   const [albums, setAlbums] = useState([]);
@@ -42,19 +42,16 @@ function App() {
   }, []);
 
   const generateCards = () => {
-    let display = [];
-
-    albums.forEach((album) => {
-      display.push(<AlbumCard key={album.collectionId}
+    const cards = albums.map((album) => 
+      (<AlbumCard key={album.collectionId}
         link={album.collectionViewUrl}
         artistName={album.artistName}
         albumName={album.collectionName}
         year={album.releaseDate.slice(0, 4)}
         art={album.artworkUrl100.replace("100x100bb", "300x300bb")}
       />) 
-    })
-
-    return display;
+    )
+    return cards;
   }
 
   const loadingPage = () => {
