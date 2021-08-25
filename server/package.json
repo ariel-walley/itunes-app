@@ -1,13 +1,13 @@
 {
   "name": "itunes-app-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Server back-end for iTunes App",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ariel Walley",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",

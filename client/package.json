@@ -1,5 +1,8 @@
 {
   "name": "itunes-app-client",
+  "description": "Front-end for iTunes App",
+  "author": "Ariel Walley",
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
