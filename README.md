@@ -5,7 +5,7 @@ This app uses the [iTunes Store API](https://affiliate.itunes.apple.com/resource
 This app was created to meet the front-end programming challenge at [SharpSpring](https://sharpspring.com/) as part of the interview process for the Software Engineer position. 
 
 This app is created using:
-* [the iTunes Store API](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
+* [iTunes Store API](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/)
 * [Node.js](https://nodejs.org/)
 * [Express](http://expressjs.com/)
 * [Axios](https://axios-http.com/)
@@ -20,11 +20,13 @@ Note: You will need to have [Node.js](https://nodejs.dev/learn/how-to-install-no
 2. Navigate to \client, open Powershell, and run "npm install && npm start"
 
 ## Features
-* Clicking on the album art or information will link you to the album's iTunes page.
-* This app works for all artists! You can update the artist ID using the "artistID" constant on line 28 of App.js. Other possible artists include:
+Clicking on the album art or information will link you to the album's iTunes page.
+
+This app works for all artists! You can update the artist ID using the "artistID" constant on line 28 of App.js. Other possible artists include:
   * Ed Sheeran: 183313439
   * JORIS: 951243051
   * OneRepublic: 260414340
+  * LordHuron: 3930686870 (default artist)
 
 ## License
 MIT License
