@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React, { useState, useEffect } from 'react';
 import GlobalStyle from './globalStyles';
 import styled from 'styled-components';
