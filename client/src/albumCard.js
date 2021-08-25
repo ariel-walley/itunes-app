@@ -42,7 +42,7 @@ export default function AlbumCard(props) {
   return (
     <CardContainer>
       <Link target="_blank" href={props.link}>
-        <AlbumArt src={props.art} alt={`Album artwork for ${props.albumName}`}/>
+        <AlbumArt src={props.art} alt={`Album artwork for "${props.albumName}"`}/>
         <AlbumTitle>{props.albumName}</AlbumTitle>
         <Text>{props.artistName} ({props.year})</Text>
       </Link>

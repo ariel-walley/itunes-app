@@ -5,6 +5,14 @@ import axios from 'axios';
 import Header from './header';
 import AlbumCard from './albumCard';
 
+const Loader = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  font-size: 20px;
+`;
+
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +22,7 @@ const Container = styled.div`
 `;
 
 function App() { 
+  const [loading, setStatus] = useState(true);
   const [artist, setArtist] = useState('');
   const [albums, setAlbums] = useState([]);
 
@@ -24,6 +33,7 @@ function App() {
         setArtist(res.data.results[0].artistName);
         res.data.results.splice(0, 1)
         setAlbums(res.data.results);
+        setStatus(false);
       }
     })
     .catch((err) => {
@@ -47,13 +57,24 @@ function App() {
     return display;
   }
 
+  const loadingPage = () => {
+    if (loading) {
+      return <Loader>Loading...</Loader>
+    } else {
+      return (
+      <div>
+        <Header mainArtistName={artist}/>
+        <Container>
+         {generateCards()}
+        </Container>
+      </div>)
+    }
+  }
+
   return (
     <div>
       <GlobalStyle />
-      <Header mainArtistName={artist}/>
-      <Container>
-        {generateCards()}
-      </Container>
+      {loadingPage()}
     </div>
   );
 }

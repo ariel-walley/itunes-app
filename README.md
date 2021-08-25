@@ -12,7 +12,6 @@ This app is created using:
 * [React.js](https://reactjs.org/)
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript)
 * [styled-components](https://styled-components.com/)
-* [Firebase](https://firebase.google.com/)
 
 ## How to Start the App
 1. Navigate to \server, open Powershell, and run "node index.js" (or "nodemon index.js" if applicable)
