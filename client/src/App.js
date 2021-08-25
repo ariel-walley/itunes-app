@@ -25,9 +25,10 @@ function App() {
   const [loading, setStatus] = useState(true);
   const [artist, setArtist] = useState('');
   const [albums, setAlbums] = useState([]);
+  const artistID = '393068687';
 
   useEffect(() => {   // Get data from iTunes
-    axios.get('http://localhost:4000/')
+    axios.get(`http://localhost:4000/albums/${artistID}`)
     .then((res) => {
       if (res.data.results[0].wrapperType === 'artist') {
         setArtist(res.data.results[0].artistName);
@@ -41,20 +42,7 @@ function App() {
     })
   }, []);
 
-  const generateCards = () => {
-    const cards = albums.map((album) => 
-      (<AlbumCard key={album.collectionId}
-        link={album.collectionViewUrl}
-        artistName={album.artistName}
-        albumName={album.collectionName}
-        year={album.releaseDate.slice(0, 4)}
-        art={album.artworkUrl100.replace("100x100bb", "300x300bb")}
-      />) 
-    )
-    return cards;
-  }
-
-  const loadingPage = () => {
+  const loadingPage = () => { // Render loading page until data is fetched
     if (loading) {
       return <Loader>Loading...</Loader>
     } else {
@@ -66,6 +54,19 @@ function App() {
         </Container>
       </div>)
     }
+  }
+
+  const generateCards = () => { // Create components for album cards
+    const cards = albums.map((album) => 
+      (<AlbumCard key={album.collectionId}
+        link={album.collectionViewUrl}
+        artistName={album.artistName}
+        albumName={album.collectionName}
+        year={album.releaseDate.slice(0, 4)}
+        art={album.artworkUrl100.replace("100x100bb", "300x300bb")}
+      />) 
+    )
+    return cards;
   }
 
   return (
