@@ -25,7 +25,7 @@ function App() {
   const [loading, setStatus] = useState(true);
   const [artist, setArtist] = useState('');
   const [albums, setAlbums] = useState([]);
-  const artistID = '393068687';
+  const artistID = '393068687'; // Enter another artistID here
 
   useEffect(() => {   // Get data from iTunes
     axios.get(`http://localhost:4000/albums/${artistID}`)
